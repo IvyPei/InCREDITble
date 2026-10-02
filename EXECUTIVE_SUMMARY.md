@@ -55,3 +55,7 @@ The next milestone is to test whether customers can distinguish income from prin
 **Product principle:** planned cash transfers are not guaranteed income. Interest earned, principal returned or spent, and cash available to spend must remain clearly separated.
 
 For the complete current-version business plan, assumptions, validation milestones, and source notes, see [BUSINESS_PLAN.md](BUSINESS_PLAN.md). For the runnable prototype, see [prototype/README.md](prototype/README.md).
+
+## Prototype update - October 2, 2026
+
+The selected WINK identity now appears across the prototype and brand kit. The Portfolio page adds an amount-first risk explorer: investment amount, a risk-preference slider, four annualized interest display frequencies (weekly, biweekly, monthly, quarterly), tax assumptions, and issuer exclusions. It searches synthetic allocations under illustrative constraints and shows the proposed mix, a prefunded cash reserve, and a simple rate-shock scenario. The 2%-10% gross coupon range is invented for usability testing, not a forecast or live quote. This experiment remains separate from posted sample holdings and the original payday planner; it does not establish suitability, execute bonds, or fund actual payments.

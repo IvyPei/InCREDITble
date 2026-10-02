@@ -251,3 +251,7 @@ The following primary pages were consulted during product discovery. They suppor
 ---
 
 **Related files:** [Product executive summary](EXECUTIVE_SUMMARY.md) · [Project README](README.md) · [Prototype guide and model assumptions](prototype/README.md)
+
+## Prototype update - October 2, 2026
+
+The selected WINK identity now appears across the prototype and brand kit. The Portfolio page adds an amount-first risk explorer: investment amount, a risk-preference slider, four annualized interest display frequencies (weekly, biweekly, monthly, quarterly), tax assumptions, and issuer exclusions. It searches synthetic allocations under illustrative constraints and shows the proposed mix, a prefunded cash reserve, and a simple rate-shock scenario. The 2%-10% gross coupon range is invented for usability testing, not a forecast or live quote. This experiment remains separate from posted sample holdings and the original payday planner; it does not establish suitability, execute bonds, or fund actual payments.

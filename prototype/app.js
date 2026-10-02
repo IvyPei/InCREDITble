@@ -126,7 +126,7 @@ function renderCashChart(r){
 function renderPortfolio(r){
   $('plan-title').textContent=plans[state.plan].name;
   $('plan-description').textContent=plans[state.plan].description;
-  const values=[{name:'Treasuries',amount:r.initialBonds*r.weights[0],color:'#96baa2'},{name:'Corporates',amount:r.initialBonds*(1-r.weights[0]),color:'#264f41'},{name:'Cash reserve',amount:r.reserve,color:'#d8dda3'}];
+  const values=[{name:'Treasuries',amount:r.initialBonds*r.weights[0],color:'#b49bff'},{name:'Corporates',amount:r.initialBonds*(1-r.weights[0]),color:'#241634'},{name:'Cash reserve',amount:r.reserve,color:'#d9ff66'}];
   const denominator=state.capital-r.fee;
   $('allocation-bar').innerHTML=values.map(x=>`<span style="width:${x.amount/denominator*100}%;background:${x.color}" title="${x.name}: ${usd(x.amount)}"></span>`).join('');
   $('allocation-legend').innerHTML=values.map(x=>`<span><i style="background:${x.color}"></i>${x.name} ${pct(x.amount/denominator)}</span>`).join('');
@@ -180,7 +180,7 @@ function setView(view,push=true){
   document.body.dataset.view=state.view;
   $('planner').hidden=state.view!=='plan';$('cash-account').hidden=state.view!=='cash';$('bond-account').hidden=state.view!=='bonds';
   document.querySelector('.variant-switcher').hidden=state.view!=='plan';
-  const copy={plan:['YOUR MONEY, ON YOUR SCHEDULE','A payday.<br><em>Of your own making.</em>','Give your money a job. Plan the cash you want to receive,<br class="desktop"> and explore the bond portfolio behind it.'],cash:['YOUR PAYDAY, READY FOR EVERYDAY','Made to grow.<br><em>Ready to spend.</em>','Your portfolio pays your cash account.<br class="desktop"> Your debit card takes it from there.'],bonds:['YOUR PORTFOLIO ACCOUNT','Meet the bonds.<br><em>Behind your payday.</em>','See what you hold, what it pays, and when principal comes back.<br class="desktop"> Your investments, all in one place.']}[state.view];
+  const copy={plan:['YOUR MONEY, ON YOUR SCHEDULE','A payday.<br><em>Of your own making.</em>','Give your money a job. Plan the cash you want to receive,<br class="desktop"> and explore the bond portfolio behind it.'],cash:['YOUR PAYDAY, READY FOR EVERYDAY','Made to grow.<br><em>Ready to spend.</em>','Your portfolio pays your cash account.<br class="desktop"> Your debit card takes it from there.'],bonds:['YOUR PORTFOLIO, YOUR PACE','Find your rhythm.<br><em>See what it could pay.</em>','Choose an amount and explore your comfort with risk.<br class="desktop"> See the cash-flow estimate and the bonds behind it.']}[state.view];
   $('page-eyebrow').textContent=copy[0];$('page-title').innerHTML=copy[1];$('page-description').innerHTML=copy[2];
   document.querySelectorAll('[data-view]').forEach(button=>{const selected=button.dataset.view===state.view;button.classList.toggle('nav-active',selected);if(selected)button.setAttribute('aria-current','page');else button.removeAttribute('aria-current');});
   if(push){const url=new URL(location.href);url.searchParams.set('view',state.view);history.replaceState(null,'',url);}

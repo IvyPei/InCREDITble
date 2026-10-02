@@ -1,0 +1,128 @@
+[
+ {
+  "file": "wink-symbol-ink.svg",
+  "bytes": 638,
+  "viewBox": [
+   0.0,
+   0.0,
+   256.0,
+   256.0
+  ],
+  "aspect": 1.0,
+  "aspect_class": "square",
+  "colors": [
+   "#241634"
+  ],
+  "gradients": 0,
+  "anchors": 21,
+  "library_anchor_percentiles": {
+   "p10": 21.0,
+   "p25": 31.0,
+   "median": 53.0,
+   "p75": 95.5,
+   "p90": 194.0,
+   "p95": 274.0
+  },
+  "content_bbox": [
+   15.97,
+   17.38,
+   239.89,
+   241.29
+  ],
+  "margins": {
+   "left": 16.0,
+   "right": 16.1,
+   "top": 17.4,
+   "bottom": 14.7
+  },
+  "bbox_fill_ratio": 0.765,
+  "score": 100,
+  "findings": []
+ },
+ {
+  "file": "wink-symbol-small.svg",
+  "bytes": 649,
+  "viewBox": [
+   0.0,
+   0.0,
+   256.0,
+   256.0
+  ],
+  "aspect": 1.0,
+  "aspect_class": "square",
+  "colors": [
+   "#241634"
+  ],
+  "gradients": 0,
+  "anchors": 21,
+  "library_anchor_percentiles": {
+   "p10": 21.0,
+   "p25": 31.0,
+   "median": 53.0,
+   "p75": 95.5,
+   "p90": 194.0,
+   "p95": 274.0
+  },
+  "content_bbox": [
+   15.97,
+   17.38,
+   239.89,
+   241.29
+  ],
+  "margins": {
+   "left": 16.0,
+   "right": 16.1,
+   "top": 17.4,
+   "bottom": 14.7
+  },
+  "bbox_fill_ratio": 0.765,
+  "score": 100,
+  "findings": []
+ },
+ {
+  "file": "increditble-horizontal-ink.svg",
+  "bytes": 6866,
+  "viewBox": [
+   0.0,
+   0.0,
+   1100.0,
+   256.0
+  ],
+  "aspect": 4.297,
+  "aspect_class": "horizontal",
+  "colors": [
+   "#241634"
+  ],
+  "gradients": 0,
+  "anchors": 285,
+  "library_anchor_percentiles": {
+   "p10": 23.0,
+   "p25": 37.0,
+   "median": 75.0,
+   "p75": 155.0,
+   "p90": 257.8,
+   "p95": 379.45
+  },
+  "content_bbox": [
+   15.97,
+   17.38,
+   1057.65,
+   241.29
+  ],
+  "margins": {
+   "left": 16.0,
+   "right": 42.4,
+   "top": 17.4,
+   "bottom": 14.7
+  },
+  "bbox_fill_ratio": 0.828,
+  "score": 99,
+  "findings": [
+   {
+    "level": "INFO",
+    "code": "complexity",
+    "message": "285 anchor points (library median 75.0, p75 155.0). Check every point earns its place."
+   }
+  ]
+ }
+]

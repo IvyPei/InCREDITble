@@ -62,3 +62,13 @@ Reference facts checked during discovery:
 - https://www.irs.gov/publications/p550
 
 After choosing a direction, preserve the prototype on a throwaway branch and record the design verdict before implementing a production version.
+
+## v0.2: WINK identity and Portfolio explorer
+
+The new amount/risk explorer lives at `?view=bonds`. Enter $10,000-$5,000,000, adjust risk, and select monthly (12), biweekly (26), weekly (52), or quarterly (4) annualized interest equivalents. Actual years may contain 27 or 53 scheduled dates. These calculations do not create transfers.
+
+Six synthetic assets and 5% allocation increments illustrate optimization. The search maximizes estimated after-tax coupon income subject to arbitrary risk and duration limits, a 25% per-corporate-issuer cap, a slider-dependent speculative cap up to 50%, and exclusions. The 2%-10% gross range is designed for interaction testing. All assets are assumed at par with no default. Treasury interest gets no state-tax provision in this simplified model.
+
+The initial 0.10% cost and a three-month estimated net-interest reserve are funded from the entered capital. Reserve cash earns zero. No ongoing fees, transaction costs, credit-spread model, calls, minimum lots or suitability assessment are implemented. Fractional dollar positions are not executable bond orders. A duration-only +2 percentage-point rate shock is shown separately from credit/default risk.
+
+The explorer, original My payday planner and current holdings are independent demonstrations. Updating a proposal cannot execute a trade or change the posted holdings. Clearing every eligible asset produces an empty state rather than a stale proposal. Invalid inputs retain the last valid estimate and show an error.
