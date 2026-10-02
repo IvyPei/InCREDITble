@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>InCREDITble — Your personal payday</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="accounts.css">
+</head>
+<body data-variant="A">
+  <!-- Throwaway UI prototype: three structural variants of a cash-flow planning experience, switchable with ?variant=A/B/C. -->
+  <header class="topbar">
+    <a class="brand" href="?variant=A" aria-label="InCREDITble home"><span class="brand-mark">i</span>InCREDITble</a>
+    <nav aria-label="Main"><button class="nav-active" data-view="plan">My payday</button><button data-view="cash">Cash account</button><button data-view="bonds">Portfolio account</button></nav>
+    <span class="demo-badge"><span></span>Interactive concept</span>
+  </header>
+  <div class="demo-strip">Sample portfolios & simplified projections. No live prices, account connection, or real trades.</div>
+  <main>
+    <section class="intro">
+      <div><p class="eyebrow" id="page-eyebrow">YOUR MONEY, ON YOUR SCHEDULE</p><h1 id="page-title">A payday.<br><em>Of your own making.</em></h1><p class="intro-copy" id="page-description">Give your money a job. Plan the cash you want to receive,<br class="desktop"> and explore the bond portfolio behind it.</p></div>
+      <div class="intro-note"><span class="note-mark">↗</span><p>A plan for today.<br>Room for tomorrow.</p><span>Weekly or monthly · Your choice</span></div>
+    </section>
+    <section class="account-overview" aria-label="Your accounts">
+      <button class="account-tile" data-view="cash"><span class="account-tile-label">Cash account <span>↗</span></span><strong id="cash-tile-balance">$951.40</strong><small>Available for card spending</small></button>
+      <button class="account-tile" data-view="bonds"><span class="account-tile-label">Portfolio account <span>↗</span></span><strong id="portfolio-tile-balance">$99,900.00</strong><small>Bonds + payout reserve · sample balance</small></button>
+      <div class="account-connection"><span>Invest → Receive → Spend</span><p>Your bonds live in your portfolio.<br>Your payday arrives in cash.</p><button class="text-button" data-view="plan">Design your payday ↗</button></div>
+    </section>
+    <section class="cash-account account-page" id="cash-account" hidden aria-label="Cash account">
+      <div class="cash-main panel">
+        <div class="section-heading spread"><div><p class="eyebrow">MONEY FOR REAL LIFE</p><h2>Ready when you are.</h2></div><span class="account-label">Sample account</span></div>
+        <span class="muted">Available to spend</span><div class="cash-balance" id="cash-balance">$951.40</div>
+        <p class="muted">Pay directly from your cash balance with your debit card.</p>
+        <div class="cash-stats"><div><span>Latest portfolio payday</span><strong>+$250.00</strong><small>Oct 1 · sample posted transfer</small></div><div><span>Card spending in this demo</span><strong id="card-spending">$48.60</strong><small>Your bond holdings stay invested.</small></div></div>
+        <div class="transfer-path"><div><span class="flow-symbol">01</span><strong>Portfolio</strong><small>Bond cash flows + reserve</small></div><span aria-hidden="true">→</span><div><span class="flow-symbol">02</span><strong>Cash account</strong><small>Scheduled payday transfer</small></div><span aria-hidden="true">→</span><div><span class="flow-symbol">03</span><strong>Your debit card</strong><small>Everyday spending</small></div></div>
+        <p class="small muted" style="margin-top:15px">Only the available cash balance can be spent. Card purchases do not automatically sell bonds or borrow against the portfolio.</p>
+      </div>
+      <div class="card-panel panel">
+        <div class="section-heading spread"><h2>Your everyday card</h2><span id="card-state" class="account-label">Active · demo</span></div>
+        <div class="debit-card" id="debit-card" role="img" aria-label="Illustrative InCREDITble debit card, ending 2048"><div class="card-brand">InCREDITble<span>DEBIT</span></div><div class="card-chip" aria-hidden="true"></div><div class="card-number">•••• &nbsp; •••• &nbsp; •••• &nbsp; 2048</div><div class="card-caption"><span>YOUR MONEY. YOUR PAYDAY.</span><span>DEMO CARD</span></div></div>
+        <button class="secondary card-freeze" id="freeze-card" aria-pressed="false">Freeze card</button>
+        <div class="card-demo"><p class="eyebrow">TRY AN EVERYDAY MOMENT</p><p class="muted">A coffee, paid from your cash account.</p><button class="primary" id="coffee-payment">Simulate a $6.50 card purchase <span>↗</span></button><p class="small muted">Demo only. No real card or merchant is connected.</p><p id="card-message" role="status" aria-live="polite"></p></div>
+      </div>
+      <section class="activity-panel panel"><div class="section-heading spread"><div><p class="eyebrow">THE EVERYDAY PICTURE</p><h2>Recent activity</h2></div><span class="account-label">Illustrative transactions</span></div><div id="cash-activity"></div></section>
+    </section>
+    <section class="bond-account account-page" id="bond-account" hidden aria-label="Portfolio account">
+      <section class="portfolio-summary panel"><div class="section-heading spread"><div><p class="eyebrow">WORKING BEHIND THE SCENES</p><h2>The bonds behind your payday.</h2></div><span class="account-label">Sample holdings</span></div><div class="portfolio-account-metrics"><div><span>Total portfolio balance</span><strong>$99,900.00</strong><small>Illustrative account snapshot</small></div><div><span>Invested in bonds</span><strong>$99,150.00</strong><small>Five sample positions</small></div><div><span>Payout reserve</span><strong>$750.00</strong><small>Held inside the portfolio</small></div></div><div class="portfolio-transfer-note"><span>Bond receipts stay here until your payday. Scheduled transfers move cash into your spending account.</span><button class="secondary" data-view="cash">View cash account ↗</button></div></section>
+      <section class="holdings-panel panel"><div class="section-heading spread"><div><p class="eyebrow">WHAT YOU OWN</p><h2>Your bond holdings</h2></div><button class="secondary" data-view="plan">Explore portfolio changes ↗</button></div><div class="table-wrap"><table class="account-holdings"><caption>Fictional at-par holdings · sample values, not live market prices</caption><thead><tr><th>Bond / issuer</th><th>Type</th><th>Holding value</th><th>Coupon</th><th>Maturity</th></tr></thead><tbody id="account-holdings"></tbody></table></div><p class="small muted" style="margin-top:17px">Exploring another plan does not change these holdings. Purchases, sales, and account funding are not connected in this prototype.</p></section>
+      <section class="account-principal panel"><div class="section-heading spread"><div><p class="eyebrow">KNOW WHEN CAPITAL COMES BACK</p><h2>Principal repayment schedule</h2></div></div><div id="account-maturities" class="maturity-cards"></div><p class="small muted" style="margin-top:16px">Scheduled face-value repayments assume the issuer pays. Returned principal is not income. It stays in the portfolio for your plan or reinvestment until transferred to cash.</p></section>
+    </section>
+    <div class="workspace" id="planner">
+      <section class="controls panel" id="controls">
+        <div class="section-heading"><span class="step-number">01</span><div><p class="eyebrow">MAKE IT PERSONAL</p><h2>Design your payday</h2></div></div>
+        <div class="form-grid">
+          <label class="field">Money to put to work<div class="money-input"><span>$</span><input id="capital" type="number" min="10000" max="5000000" step="5000" value="100000"></div><small>Illustration range: $10,000–$5,000,000</small></label>
+          <fieldset><legend>How often?</legend><div class="segmented"><button id="monthly" aria-pressed="true" data-frequency="monthly">Monthly</button><button id="weekly" aria-pressed="false" data-frequency="weekly">Weekly</button></div></fieldset>
+          <label class="field"><span id="payout-label">Your monthly payday</span><div class="money-input"><span>$</span><input id="payout" type="number" min="0" max="100000" step="25" value="250"></div><small id="annual-request">$3,000 a year</small></label>
+          <label class="field">First payment<input id="start" type="date" value="2026-11-01" min="2026-11-01" max="2027-12-31"></label>
+          <label class="field range-field"><span>Capital to keep after 5 years <strong id="keep-label">100%</strong></span><input id="keep" type="range" min="0" max="100" step="5" value="100"><small id="keep-dollars">Aim to retain $100,000. Not a guarantee.</small></label>
+          <label class="toggle-row"><span><strong>Reinvest instead</strong><small>Pause cash payouts; compound net income.</small></span><input id="reinvest" type="checkbox" role="switch"></label>
+        </div>
+        <details class="tax-settings"><summary>Tax assumptions <span>Illustration only</span></summary><div class="two-cols"><label class="field">Federal rate (%)<input id="federal" type="number" min="0" max="40" step="1" value="24"></label><label class="field">State/local rate (%)<input id="state-tax" type="number" min="0" max="15" step="0.1" value="5"></label></div><p>Taxable account; synthetic bonds bought at par. Treasury interest uses the federal rate only. A modeled tax reserve is separate from spendable cash.</p></details>
+        <p id="input-error" role="alert" hidden></p>
+      </section>
+      <section class="payday-panel" id="payday">
+        <div class="payday-top"><span class="eyebrow">YOUR PLANNED PAYDAY</span><span class="pill">5-year illustration</span></div>
+        <div class="payday-amount"><span id="hero-amount">$250</span><span id="hero-frequency">/ month</span></div>
+        <p id="hero-caption">A planned transfer to your cash account.</p>
+        <div class="payday-divider"></div>
+        <div class="payday-details"><div><span>First payment</span><strong id="first-date">Nov 1, 2026</strong></div><div><span>Estimated net interest / year</span><strong id="net-interest">—</strong></div><div><span>Starting payout reserve</span><strong id="reserve-total">—</strong></div></div>
+        <div class="status" id="status" role="status" aria-live="polite"></div>
+        <button class="primary light" id="review">Review this plan <span>↗</span></button>
+        <p class="hero-footnote">Scheduled ≠ guaranteed. Payments depend on available cash.</p>
+      </section>
+      <section class="timeline panel" id="timeline">
+        <div class="section-heading spread"><div><p class="eyebrow">FROM PORTFOLIO TO POCKET</p><h2>Your next 12 months</h2></div><div class="legend"><span><i class="income-dot"></i>Net interest</span><span><i class="payout-dot"></i>Cash payouts</span></div></div>
+        <div id="cash-chart" class="cash-chart" role="img" aria-label="Monthly illustrative interest received and cash payouts"></div>
+        <div class="timeline-footer"><span>Uneven bond receipts. A steady planned payday.</span><button class="text-button" id="show-schedule">See the payment schedule ↗</button></div>
+        <details id="schedule-details"><summary>Payment schedule & cash ledger</summary><div class="table-wrap"><table><caption>Next eight planned transfers to your cash account</caption><thead><tr><th>Date</th><th>Requested</th><th>Funded in model</th></tr></thead><tbody id="payment-ledger"></tbody></table></div><div class="table-wrap"><table><caption>First year · monthly periods starting on your payment date · tax provision deducted before available cash</caption><thead><tr><th>Period begins</th><th>Net interest</th><th>Cash payout</th><th>Ending cash</th></tr></thead><tbody id="cash-ledger"></tbody></table></div></details>
+      </section>
+      <section class="portfolio panel" id="portfolio">
+        <div class="section-heading spread"><div><p class="eyebrow">THE PLAN BEHIND THE PAYDAY</p><h2 id="plan-title">Balanced income</h2></div><button class="secondary" id="alternative">Show another plan <span>↻</span></button></div>
+        <p class="muted" id="plan-description"></p>
+        <div id="allocation-bar" class="allocation-bar" role="img" aria-label="Illustrative portfolio allocation"></div>
+        <div class="allocation-legend" id="allocation-legend"></div>
+        <p class="change-note" id="change-note" role="status"></p>
+        <div class="portfolio-actions"><button class="text-button" id="compare-toggle" aria-expanded="false">Compare with Treasuries ↗</button><button class="text-button" id="holdings-toggle" aria-expanded="false">Personalize the bonds ↗</button></div>
+        <div id="comparison" hidden></div>
+        <div id="holdings" hidden><p class="muted">Optional preferences. All company names and bonds below are fictional. Exclusions apply across alternative plans.</p><div id="bond-list"></div><p class="small muted">Excluded weight moves to Treasuries. “Prefer” tilts the sample allocation within a 25% issuer cap. This is not an optimization engine.</p></div>
+      </section>
+      <section class="future panel" id="future">
+        <div class="section-heading"><div><p class="eyebrow">INCOME TODAY. CAPITAL TOMORROW.</p><h2>Keep the whole picture in view</h2></div></div>
+        <div class="future-metrics"><div><span>Cash paid over 5 years</span><strong id="five-payout">—</strong><small>May include planned principal spending.</small></div><div><span>Estimated capital remaining</span><strong id="end-capital">—</strong><small id="end-target">Compared with your target.</small></div></div>
+        <div id="capital-chart" class="capital-chart" role="img" aria-label="Projected remaining capital over five years"></div>
+        <p class="muted" id="payout-sources"></p>
+        <details><summary>When the underlying bonds mature</summary><div class="table-wrap"><table><caption>Illustrative principal receipts before reinvestment · not extra income</caption><thead><tr><th>Maturity</th><th>Principal returned</th><th>Model treatment</th></tr></thead><tbody id="maturity-ledger"></tbody></table></div><p class="small muted">Maturing principal is assumed to be reinvested at the same sample rate. Future rates and availability are unknown. At-par samples have no modeled gain or loss on repayment.</p></details>
+      </section>
+      <section class="risk panel" id="risk">
+        <div class="section-heading"><div><p class="eyebrow">KNOW THE TRADE-OFFS</p><h2>A clearer view of risk</h2></div></div>
+        <div class="risk-grid"><div><span class="risk-icon">01</span><h3>Company repayment</h3><p id="credit-risk"></p></div><div><span class="risk-icon">02</span><h3>Changing market prices</h3><p id="rate-risk"></p></div><div><span class="risk-icon">03</span><h3>Your cash schedule</h3><p id="cash-risk"></p></div></div>
+        <details><summary>What if a corporate coupon is missed?</summary><p id="stress-copy"></p></details>
+      </section>
+    </div>
+    <section class="methodology" id="methodology"><p class="eyebrow">ABOUT THIS CONCEPT</p><h2>A plan to explore, not a promise.</h2><p>This is a throwaway product prototype. All yields, issuers, allocations, and results are synthetic. It assumes fixed illustrative rates, no defaults, at-par bonds, and a 0.10% initial cost. Unpaid net income accumulates as cash; reinvest mode compounds annually. The five-year model rolls maturities at unchanged rates; the first-year ledger shows cash timing. Taxes are simplified provisions, not actual withholding. No market pricing, credit analysis, suitability assessment, or trading is connected.</p><details><summary>Inspect the current prototype state</summary><pre id="state-view"></pre></details></section>
+    <footer><a class="brand" href="#">InCREDITble</a><p>Your portfolio. Your payday.</p><span>Prototype · October 2026</span></footer>
+  </main>
+  <aside class="variant-switcher" aria-label="Prototype layout switcher"><button id="previous-variant" aria-label="Previous layout">←</button><div><small>EXPLORE THE EXPERIENCE</small><span id="variant-name">A · Payday dashboard</span></div><button id="next-variant" aria-label="Next layout">→</button></aside>
+  <dialog id="review-dialog"><button class="dialog-close" id="close-dialog" aria-label="Close plan review">×</button><p class="eyebrow">YOUR PLAN, AT A GLANCE</p><h2>A little more clarity.<br>A payday to plan around.</h2><div id="review-content"></div><p class="small muted">Demo only. This action saves nothing and moves no money.</p><button class="primary" id="finish-review">Looks good for now</button><p id="review-confirmation" role="status"></p></dialog>
+  <script src="app.js"></script>
+</body>
+</html>

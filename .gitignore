@@ -1,0 +1,16 @@
+# Local agent tooling is not part of the product.
+.agents/
+.codex/
+skills-lock.json
+
+# Local environment, credentials, and generated files.
+.env
+.env.*
+!.env.example
+.DS_Store
+node_modules/
+__pycache__/
+*.pyc
+*.log
+.venv/
+dist/
