@@ -1,0 +1,127 @@
+1
+00:00:00,400 --> 00:00:06,387
+In customer discovery, I heard: Finding a bond’s CUSIP is such a pain.
+
+2
+00:00:06,387 --> 00:00:12,374
+I don’t know where to buy. Fidelity’s bond account is not for me.
+
+3
+00:00:12,374 --> 00:00:16,058
+I only want to invest a small amount.
+
+4
+00:00:16,058 --> 00:00:19,282
+Different comments, one design challenge: getting started.
+
+5
+00:00:25,400 --> 00:00:30,288
+How can someone with no bond experience understand a few options and make
+
+6
+00:00:30,288 --> 00:00:33,672
+their first small purchase? That’s the question behind InCreditble.
+
+7
+00:00:37,400 --> 00:00:41,155
+First, I tell the product I’m new to bonds.
+
+8
+00:00:41,155 --> 00:00:44,076
+That changes how much explanation I get.
+
+9
+00:00:44,076 --> 00:00:49,501
+My risk preference is separate. Then I choose a yield target, a timeframe,
+
+10
+00:00:49,501 --> 00:00:54,090
+an industry and a budget. Let’s start with just twenty-five dollars.
+
+11
+00:00:59,400 --> 00:01:03,406
+I don’t need to start with a bond identifier.
+
+12
+00:01:03,406 --> 00:01:07,412
+The finder gives me three matches within my preferences.
+
+13
+00:01:07,412 --> 00:01:13,198
+I can compare an earlier repayment date, a different industry and more interest,
+
+14
+00:01:13,198 --> 00:01:15,424
+with the important trade-offs visible.
+
+15
+00:01:20,400 --> 00:01:25,346
+When I need help, I can ask about the company or what could
+
+16
+00:01:25,346 --> 00:01:30,293
+go wrong. Here, the assistant explains the risk of missed payments and selling
+
+17
+00:01:30,293 --> 00:01:34,098
+early. The explanations are optional; the decision stays with me.
+
+18
+00:01:39,400 --> 00:01:45,035
+Now I see a sample price, with separate buy and sell quotes.
+
+19
+00:01:45,035 --> 00:01:48,792
+My twenty-five dollars buys part of a bond.
+
+20
+00:01:48,792 --> 00:01:54,897
+Before confirming, I can see exactly what I pay, the cash I’ll have
+
+21
+00:01:54,897 --> 00:01:58,184
+left, expected interest and the repayment date.
+
+22
+00:01:58,184 --> 00:02:01,471
+These are promised payments, not guaranteed returns.
+
+23
+00:02:07,400 --> 00:02:12,041
+After I approve, the new holding appears and my cash balance updates.
+
+24
+00:02:12,041 --> 00:02:15,909
+The payment view helps me see when interest is expected.
+
+25
+00:02:15,909 --> 00:02:20,936
+Existing sample accounts stay visible alongside this position, so I can see the
+
+26
+00:02:20,936 --> 00:02:21,710
+wider picture.
+
+27
+00:02:25,400 --> 00:02:31,613
+Underneath, explicit filters and transparent ranking narrow a pool of 672 fictional bonds.
+
+28
+00:02:31,613 --> 00:02:36,870
+The prototype tracks fractional positions, settlement, cost basis and payment schedules.
+
+29
+00:02:36,870 --> 00:02:41,171
+Assistant responses, identity checks, quotes and connections are simulated;
+
+30
+00:02:41,171 --> 00:02:44,994
+no live AI model or broker is connected.
+
+31
+00:02:46,400 --> 00:02:51,981
+Next, we’ll test whether first-time investors can explain their purchase and its risks
+
+32
+00:02:51,981 --> 00:02:55,844
+without coaching. InCreditble. Your first bond. At your pace.

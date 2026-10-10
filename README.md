@@ -1,47 +1,123 @@
 # InCreditble
 
-**Your portfolio. Your payday.**
+**Your first bond. At your pace.**
 
-A cash-flow-led investing concept: customers explore weekly, biweekly, monthly or quarterly cash-flow equivalents, explore a Treasury/corporate-bond portfolio, and see how scheduled transfers could support everyday debit-card spending.
+InCreditble is a corporate-bond trading prototype for people who are new to investing, especially older adults who want clear explanations and a small first step. Start with a yield target, a timeframe and an industry. Compare up to three explained matches, explore a fractional purchase from $10, and review the price and payment schedule before approving a simulated trade.
 
-**Version 0.2 · October 2, 2026 · Interactive prototype with synthetic data**
+![InCreditble welcome with its WINK logo, beginner-friendly message and four core features](demo/media/welcome.jpg)
 
-## Read the product and business plan
+## Demo & pitch
 
-- [Product executive summary](EXECUTIVE_SUMMARY.md): the customer, product, founder advantage, current capabilities, and next milestone.
-- [Current-version business plan](BUSINESS_PLAN.md): discovery evidence, customer journey, operating and revenue hypotheses, competitive references, validation work, and unresolved decisions.
-- [Prototype guide](prototype/README.md): interface variants, model assumptions, and demo boundaries.
+| Material | Open or download |
+| --- | --- |
+| Latest pitch deck | [10-slide PowerPoint v4](demo/deliverables/InCreditble-pitch-v4.pptx) · [2:50 speaker script](demo/deliverables/PITCH_SCRIPT.md) |
+| Product demo video | [2:58 English demo · MP4](demo/deliverables/InCreditble-demo-v1.mp4) · [Subtitles](demo/deliverables/InCreditble-demo-v1.srt) |
+| Present it live | [Walkthrough](demo/LIVE_DEMO.md) · [Video narration](demo/PITCH.md) · [Judge Q&A](demo/JUDGE_QA.md) |
+| Product & brand | [Positioning](demo/POSITIONING.md) · [WINK brand kit](https://github.com/IvyPei/InCREDITble/tree/main/brand/wink) |
+| Complete demo bundle | [Download ZIP](https://github.com/IvyPei/InCREDITble/raw/refs/heads/main/demo/releases/InCreditble-demo.zip) · [Package checks](demo/PACKAGE_CHECK.md) |
 
-## Run locally
+The video is a first-cut screenshot montage with English synthetic narration and burned-in captions. The editable deck includes sources and speaker notes, plus the actual website welcome screen on slide 5. See [deliverable details](demo/deliverables/README.md). This private repository requires access; it is not a public website deployment.
 
-Requires Python 3. From this directory:
+## The problem we are solving
+
+Our starting user is someone who can describe what they want from their savings but cannot confidently translate that goal into a bond order. They need to understand what a company does, when it should pay them, what the purchase costs and what could go wrong. InCreditble starts with those questions, without requiring a bond identifier such as a CUSIP.
+
+The product hypothesis is that a short, explained path from a goal to an explicit decision can make a first bond purchase easier to understand. That is what this prototype lets us test.
+
+## What we built
+
+- **A focused finder.** Yield, holding period, industry and amount produce at most three distinct-issuer matches from 672 fictional bonds across 18 industries. User risk limits remain hard constraints. Repeated yield/term combinations receive less weight so alternatives are easier to compare.
+- **Help at the right depth.** Simulated onboarding captures bond familiarity separately from risk preference. A contextual assistant interface explains the company, match, payments, pricing and risks using local sample responses.
+- **Small, deliberate trades.** Fractional purchases start at $10 in the demo. Buy and sell flows show sample price movement, separate quotes, final cash cost or proceeds, expected interest and principal repayment. The user confirms each simulated order.
+- **An overview that stays connected.** Sample external accounts appear alongside local holdings, with a portfolio chart, profit/loss and payment schedule. Transactions update cash and holdings, and demo progress survives refresh.
+
+## A look inside
+
+Actual screenshots from the interactive prototype. Companies, prices, accounts and trades shown are sample data.
+
+### Your investments at a glance
+
+See total value and profit/loss, filter the portfolio chart by account or asset type, and keep connected sample accounts visible. Holdings and Payments switch within the same focused overview.
+
+![Portfolio overview with account filters, total profit and loss, and Connect account](demo/media/portfolio-overview.jpg)
+
+### Start with your goals
+
+Choose yield, holding period, industry and an amount from $10. Keep your own yield target or allow it to adjust with your selections.
+
+![Bond finder with yield and holding-period sliders, industry selection and fractional investment amount](demo/media/bond-finder.jpg)
+
+<details>
+<summary><strong>Compare three explained matches</strong></summary>
+
+Each candidate highlights a useful difference, such as earlier repayment, a different industry or more interest. Company details and the rationale are available when needed.
+
+![Three distinct bond matches with yield, repayment time and comparison labels](demo/media/bond-matches.jpg)
+
+</details>
+
+<details>
+<summary><strong>Ask for a plain-language explanation</strong></summary>
+
+Explore why a bond matches, how the company works, or what could go wrong. The assistant shown here uses local sample responses and leaves the trade decision to the user.
+
+![Contextual bond assistant explaining missed-payment and early-sale risks](demo/media/bond-assistant.jpg)
+
+</details>
+
+<details>
+<summary><strong>Understand the price before choosing an amount</strong></summary>
+
+A sample price chart and separate buy/sell quotes make the spread visible before the order review. These are invented quotes, not a live market feed.
+
+![Simulated price movement and separate buy and sell quotes](demo/media/bond-quotes.jpg)
+
+</details>
+
+<details>
+<summary><strong>Review what you pay and when the bond could pay you</strong></summary>
+
+Review the cash cost, face value, remaining cash, expected interest and principal repayment date before confirming a simulated purchase.
+
+![Final order review showing price, cash cost, expected interest and principal repayment](demo/media/order-review.jpg)
+
+</details>
+
+<details>
+<summary><strong>See the interest and dividend payment schedule</strong></summary>
+
+Switch from the portfolio chart to Payments. Monthly estimates and individual entries distinguish expected payments from income already received.
+
+![Monthly interest and dividend schedule with received and expected payment details](demo/media/payment-schedule.jpg)
+
+</details>
+
+## Try it locally
+
+Requires Python 3. No API keys, npm install or build step.
 
 ```sh
 python3 -m http.server 4173 --bind 127.0.0.1 --directory prototype
 ```
 
-If Node.js/npm is installed, `npm run prototype` runs the same command. No npm installation or build is required.
+Open **http://127.0.0.1:4173/** and click **Enter overview**, then **Find a bond**. `npm run prototype` is an optional shortcut for the same server command.
 
-Open [the prototype](http://127.0.0.1:4173/).
+For a repeatable demo, use **Your account → Settings → Reset demo progress → Reset demo**. Refresh shows the welcome screen and returns to Overview; saved trades and preferences remain until reset. Use the same browser and port to keep the same demo progress.
 
-| View | Local URL | What to explore |
-| --- | --- | --- |
-| My payday | [Planner](http://127.0.0.1:4173/?view=plan) | Payment goals, alternative portfolios, taxes, funding gaps, and projections |
-| Cash account | [Cash](http://127.0.0.1:4173/?view=cash) | Spendable balance, activity, debit-card mockup, and a simulated purchase |
-| Portfolio account | [Portfolio](http://127.0.0.1:4173/?view=bonds) | Amount + risk explorer, four income frequencies, proposed allocations, and existing sample holdings |
+## How it works
 
-The planner's bottom arrows switch between three structural layouts: A, payday dashboard; B, guided plan; C, cash-flow workbench. Query parameters can be combined, such as `?view=plan&variant=B`.
+The application is dependency-free HTML, CSS and JavaScript. Explicit filters enforce yield, industry, repayment horizon and the selected credit-risk limit. A deterministic scorer balances credit quality, target fit, repayment time, known local holdings and variety. Explanations use the same bond and preference data as the finder.
 
-## What this version is
+The quote module calculates fractional face value and settlement in integer cents. The portfolio tracks cash, cost basis and realized/unrealized profit or loss; expected payments remain separate from income already received. Versioned browser storage restores validated demo state.
 
-This is a product-discovery artifact, not a launched financial service. The calculations are simplified illustrations. No market data, real financial account, card issuer, trade, or payment system is connected. State resets on reload.
+See [prototype implementation notes](prototype/README.md) for the module map and assumptions.
 
-The proposed product keeps three quantities distinct: invested bonds, a portfolio payout reserve, and available cash for spending. Interest income and principal repayments are also separated. Scheduled cash transfers are not guarantees.
+## What is simulated
 
-Local agent skills, credentials, and machine-specific files are excluded from version control. No production license or open-source license is asserted by this repository.
+All issuers, market prices, yields, ratings, default rates, bank comparisons and account data are fictional. The assistant uses deterministic responses, not a connected AI model. KYC, account linking and trading are simulations; no credentials or identity documents are collected. No live brokerage, execution, custody or fractional-bond service is integrated. Fees and accrued interest are zero in the demo, and positions use a fixed $100 valuation reference. Real execution prices, liquidity and payments would differ.
 
-## Selected identity and new Portfolio explorer
+## What comes next
 
-[WINK brand kit](brand/wink/README.md) · [Asset gallery](brand/wink/index.html) · [Brand guidelines](brand/wink/BRAND_GUIDE.md) · [Marketing copy](brand/wink/MARKETING_COPY.md)
+Test whether first-time users can explain the price, expected payments and risks before confirming an order, and whether seeing existing accounts makes a separate bond experience useful. A production version would need verified security and quote data, a supported execution/custody model for fractional positions, actual identity and account-linking integrations, and grounded AI responses that can show sources and acknowledge missing information.
 
-The Portfolio page now accepts an investment amount (starting at $10,000), a risk preference, four cash-flow display frequencies, taxes and issuer exclusions. A grid search selects from synthetic at-par assets under toy risk, duration and concentration constraints. The 2%-10% gross coupon range is illustrative, not live market data or expected total return. Amounts shown per period are annualized after-tax interest equivalents, not a funded payment schedule. The explorer is independent of the original payday planner and posted sample holdings.
+The current demo is the corporate-bond trading experience. Earlier payday and wealth-management materials are historical concepts, not capabilities of this version. No production or open-source license is asserted here.

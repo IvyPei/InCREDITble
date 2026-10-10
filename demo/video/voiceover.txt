@@ -1,0 +1,17 @@
+In customer discovery, I heard: Finding a bond’s CUSIP is such a pain. I don’t know where to buy. Fidelity’s bond account is not for me. I only want to invest a small amount. Different comments, one design challenge: getting started.
+
+How can someone with no bond experience understand a few options and make their first small purchase? That’s the question behind InCreditble.
+
+First, I tell the product I’m new to bonds. That changes how much explanation I get. My risk preference is separate. Then I choose a yield target, a timeframe, an industry and a budget. Let’s start with just twenty-five dollars.
+
+I don’t need to start with a bond identifier. The finder gives me three matches within my preferences. I can compare an earlier repayment date, a different industry and more interest, with the important trade-offs visible.
+
+When I need help, I can ask about the company or what could go wrong. Here, the assistant explains the risk of missed payments and selling early. The explanations are optional; the decision stays with me.
+
+Now I see a sample price, with separate buy and sell quotes. My twenty-five dollars buys part of a bond. Before confirming, I can see exactly what I pay, the cash I’ll have left, expected interest and the repayment date. These are promised payments, not guaranteed returns.
+
+After I approve, the new holding appears and my cash balance updates. The payment view helps me see when interest is expected. Existing sample accounts stay visible alongside this position, so I can see the wider picture.
+
+Underneath, explicit filters and transparent ranking narrow a pool of 672 fictional bonds. The prototype tracks fractional positions, settlement, cost basis and payment schedules. Assistant responses, identity checks, quotes and connections are simulated; no live AI model or broker is connected.
+
+Next, we’ll test whether first-time investors can explain their purchase and its risks without coaching. InCreditble. Your first bond. At your pace.

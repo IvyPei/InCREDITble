@@ -1,3 +1,5 @@
+> **Historical concept:** This document describes the earlier payday and wealth-management exploration. For the current corporate-bond trading demo, use [README](README.md) and the [demo package](demo/PITCH.md).
+
 # InCREDITble — Product Executive Summary
 
 **Your portfolio. Your payday.**

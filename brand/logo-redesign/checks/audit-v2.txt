@@ -1,0 +1,42 @@
+
+=== a-in-step-lockup-v2.svg  (6718 bytes)
+viewBox 0 0 1141 256 · aspect 4.457 (horizontal)
+colours 1: #111111 · gradients 0 · anchors 278
+margins L22.0 R43.6 T21.0 B32.0 · bbox fill 0.747
+· INFO [complexity] 278 anchor points (library median 75.0, p75 155.0). Check every point earns its place.
+production-readiness score: 99/100 (heuristic)
+
+=== a-in-step-v2.svg  (480 bytes)
+viewBox 0 0 256 256 · aspect 1.0 (square)
+colours 1: #111111 · gradients 0 · anchors 14
+margins L22.0 R21.8 T21.0 B32.0 · bbox fill 0.657
+· INFO [off-centre-y] Vertical margins differ (top 21.0, bottom 32.0). Remember the optical centre sits slightly above the geometric centre.
+production-readiness score: 99/100 (heuristic)
+
+=== b-cadence-lockup-v2.svg  (6645 bytes)
+viewBox 0 0 1141 256 · aspect 4.457 (horizontal)
+colours 1: #111111 · gradients 0 · anchors 282
+margins L24.0 R43.6 T24.0 B24.0 · bbox fill 0.764
+· INFO [complexity] 282 anchor points (library median 75.0, p75 155.0). Check every point earns its place.
+production-readiness score: 99/100 (heuristic)
+
+=== b-cadence-v2.svg  (407 bytes)
+viewBox 0 0 256 256 · aspect 1.0 (square)
+colours 1: #111111 · gradients 0 · anchors 18
+margins L24.0 R24.0 T24.0 B24.0 · bbox fill 0.66
+✔ no issues found
+production-readiness score: 100/100 (heuristic)
+
+=== c-daymark-lockup-v2.svg  (6673 bytes)
+viewBox 0 0 1141 256 · aspect 4.457 (horizontal)
+colours 1: #111111 · gradients 0 · anchors 282
+margins L28.0 R43.6 T24.0 B24.0 · bbox fill 0.762
+· INFO [complexity] 282 anchor points (library median 75.0, p75 155.0). Check every point earns its place.
+production-readiness score: 99/100 (heuristic)
+
+=== c-daymark-v2.svg  (435 bytes)
+viewBox 0 0 256 256 · aspect 1.0 (square)
+colours 1: #111111 · gradients 0 · anchors 18
+margins L28.0 R28.0 T24.0 B24.0 · bbox fill 0.635
+✔ no issues found
+production-readiness score: 100/100 (heuristic)

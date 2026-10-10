@@ -1,74 +1,48 @@
-# InCREDITble — throwaway product prototype
+# InCreditble prototype implementation
 
-Question: Can someone design a weekly/monthly cash-flow plan, understand its funding and risks, and personalize the underlying bond portfolio without having to pick every security?
+The current product is an English corporate-bond trading prototype for beginners. It explores one question: can someone choose, understand and approve a small bond purchase from their goals rather than a bond identifier?
 
-Run from the project root:
+## Run
+
+From the repository root, run:
 
 ```sh
-npm run prototype
+python3 -m http.server 4173 --bind 127.0.0.1 --directory prototype
 ```
 
-Open http://127.0.0.1:4173. No dependencies or build step. Open `index.html` directly as an alternative.
+Open http://127.0.0.1:4173/. No dependencies or build. The welcome always precedes Overview on a full load. Demo setup begins when the user enters Find bonds. Use the server rather than opening the HTML file directly so browser storage has a consistent origin.
 
-Three structural layouts share the same state and interactions:
+## Module map
 
-- `?variant=A`: Payday dashboard; controls beside the outcome.
-- `?variant=B`: Guided plan; goal inputs, portfolio, then outcome in a vertical sequence.
-- `?variant=C`: Cash-flow workbench; payment timeline first, with the portfolio and payday beside each other.
+| File | Responsibility |
+| --- | --- |
+| `index.html`, `trading.css` | Page shell, welcome, accessible controls and responsive layout |
+| `trading.js` | Fictional bond/account fixtures, filters, state and trade workflow |
+| `bond-matching.js` | Deterministic shortlist and relative comparisons |
+| `company-profiles.js` | Fictional issuer descriptions and business risks |
+| `bond-guide.js` | Contextual sample explanations; no LLM or network calls |
+| `bond-quotes.js` | Invented quotes, fractional settlement and payment preview |
+| `portfolio-history.js` | Account/asset-filterable sample portfolio history |
+| `portfolio-income.js` | Sample income schedule and profit/loss accounting |
+| `demo-session.js` | Versioned, validated local demo persistence |
 
-The floating switcher and left/right keys cycle layouts. Inputs preserve native arrow-key behavior. State is memory-only and resets on reload. The state inspector exposes all inputs and the computed summary.
+## State and calculations
 
-## Cash and portfolio accounts
+- Yield, industry, maturity horizon and credit-risk preference filter eligible bonds first. Ranking never relaxes those limits to manufacture three matches.
+- The shortlist has up to three different issuers. Ranking considers credit quality, yield fit, earlier repayment, known local holdings, industry variety and near-duplicate alternatives. External funds have no issuer look-through data and are not scored for concentration.
+- Buys specify a cash budget; sells specify face value. Buy face value rounds down, settlement rounds to cents, and cash cannot become negative. Weighted-average basis supports partial-sale profit/loss.
+- The valuation reference is $100 per $100 face. Buy/sell spreads affect displayed total value and P/L. Reference yield is not recalculated as executable yield at the simulated quote. Fees/accrual are zero; no tax lots, defaults or market liquidity are modeled.
+- The financial snapshot is fixed at October 9, 2026. Local coupons fall on April 9 and October 9, with the next modeled payment on April 9, 2027. These are fixtures, not today's market schedule.
+- Confirmed trades, profile choices, finder drafts and sample connections persist locally. Quotes and unconfirmed orders do not. Storage failure is reported in Settings.
 
-- `?view=cash`: Sample cash balance, debit card, posted transactions, card freeze/unfreeze, and a simulated $6.50 purchase. The purchase only reduces available cash and adds an activity row. Frozen cards and insufficient balances are declined; there is no bond sale, borrowing, or real payment.
-- `?view=bonds`: A fixed illustrative account snapshot showing five holdings, coupons, maturities, and the portfolio's payout reserve. Proposed-plan changes do not mutate posted holdings.
-- `?view=plan`: The original payday planner and its three layout variants.
+## Demonstrating and resetting
 
-The posted account snapshot is deliberately separate from the unapproved plan. It starts with $951.40 in cash (a $750 opening balance, a $250 prior payday, and $48.60 of card spending), plus $99,150 in bonds and a $750 portfolio reserve. Cash-account transactions use integer cents. The debit card is a visual simulation, with no issuer, payment network, bank connection, or live financial account. No deposit-insurance claims are made. Balances reset on reload.
+Use [the live demo guide](../demo/LIVE_DEMO.md). **Your account → Settings → Reset demo progress** restores the original sample accounts and balances after confirmation. No real personal information is needed.
 
-## Agreed concept
+Variant A is the presentation default. `?variant=B` and `?variant=C` expose alternative finder layouts; `?review=1` exposes reviewer controls. Those controls are not part of the pitch.
 
-- US individuals seeking spendable, scheduled cash flow.
-- Treasuries and corporate bonds behind a goal-led customer experience.
-- Weekly/monthly planned transfers smoothed with an upfront cash reserve.
-- Preserve principal or choose planned drawdown via an ending-capital target.
-- Payouts or reinvestment; issuer exclusions/preferences are optional.
-- Alternative plans retain the user's goals and constraints.
-- Show net-interest estimates, principal maturity dates, remaining capital, risks, and infeasible targets.
+## Verification and limits
 
-## Demo boundaries
+The October 10 checks included 23 persistence/payment/comparison cases and 1,140 matching-filter invariant cases. Browser checks covered buy/sell accounting, partial/full-sale payment previews, refresh restoration, reset, and 390px layout containment. These are prototype checks, not production certification.
 
-All rates, corporate issuers, and allocations are synthetic. This is not an investment recommendation, optimizer, quote source, risk model, broker, or tax calculator. No real CUSIPs or orders. Nothing persists and no account is connected. Fonts are optional Google Fonts with local fallbacks.
-
-The five-year model uses at-par positions with fixed sample coupons and semiannual receipt offsets. It first allocates a cash reserve, reducing invested capital. Reserve sizing covers either roughly three months of payouts or projected principal consumption. Requested transfers happen before each monthly period's coupon receipts; the ledger flags any unfunded payments rather than silently borrowing or selling bonds. Cash earns zero. An initial 0.10% cost is assumed; no ongoing fees or subsequent trade costs are modeled.
-
-Federal and state/local tax inputs create simplified tax provisions; Treasury interest uses federal tax only. Provision is not actual withholding. At-par maturities have no modeled gain/loss. Tax-lot, discount, premium, NIIT, and deduction effects are excluded. Future maturity proceeds are assumed reinvested at unchanged sample rates, with the same notional coupon schedule. Thus this is not a precise security-level cash-flow forecast. In payout mode net surplus accumulates as cash. In reinvest mode coupons compound annually. Ending values exclude mark-to-market changes and default losses. Principal returned is not labeled income.
-
-The maturity table shows original modeled positions and their repeated maturity rolls within the horizon. New positions bought using reinvested coupons are not itemized in that table. Five-year summaries incorporate their modeled interest.
-
-## Review prompts
-
-1. Can a user distinguish income earned, principal spent, and transfers to cash?
-2. Can they explain a funding gap and choose how to adjust it?
-3. Does the cash reserve explanation make a weekly payday credible?
-4. Do issuer preferences help, or distract from the cash-flow goal?
-5. Which of the three layouts makes the trade-offs clearest?
-
-Production service model, discretion over trades, pricing, taxes, execution/custody partners, risk constraints, investment minimums, and live data remain unresolved. This prototype intentionally cannot activate a plan.
-
-Reference facts checked during discovery:
-- https://www.treasurydirect.gov/marketable-securities/
-- https://www.investor.gov/introduction-investing/general-resources/news-alerts/alerts-bulletins/investor-bulletins/what-are
-- https://www.irs.gov/publications/p550
-
-After choosing a direction, preserve the prototype on a throwaway branch and record the design verdict before implementing a production version.
-
-## v0.2: WINK identity and Portfolio explorer
-
-The new amount/risk explorer lives at `?view=bonds`. Enter $10,000-$5,000,000, adjust risk, and select monthly (12), biweekly (26), weekly (52), or quarterly (4) annualized interest equivalents. Actual years may contain 27 or 53 scheduled dates. These calculations do not create transfers.
-
-Six synthetic assets and 5% allocation increments illustrate optimization. The search maximizes estimated after-tax coupon income subject to arbitrary risk and duration limits, a 25% per-corporate-issuer cap, a slider-dependent speculative cap up to 50%, and exclusions. The 2%-10% gross range is designed for interaction testing. All assets are assumed at par with no default. Treasury interest gets no state-tax provision in this simplified model.
-
-The initial 0.10% cost and a three-month estimated net-interest reserve are funded from the entered capital. Reserve cash earns zero. No ongoing fees, transaction costs, credit-spread model, calls, minimum lots or suitability assessment are implemented. Fractional dollar positions are not executable bond orders. A duration-only +2 percentage-point rate shock is shown separately from credit/default risk.
-
-The explorer, original My payday planner and current holdings are independent demonstrations. Updating a proposal cannot execute a trade or change the posted holdings. Clearing every eligible asset produces an empty state rather than a stale proposal. Invalid inputs retain the last valid estimate and show an error.
+All financial data, integrations and orders are simulated. No live AI model or external service is connected. Full iteration notes remain in `TRADING_PROTOTYPE.md` in the working repository; earlier entries describe superseded designs.

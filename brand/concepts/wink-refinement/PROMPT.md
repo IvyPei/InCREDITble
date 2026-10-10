@@ -1,0 +1,18 @@
+# InCreditble — The wink, refined
+
+User direction: preserve the memorable eye of Pocket Pal, simplify and distill.
+
+Built-in image generation, reference-based edit. Source: ../creative-round-4/creative-directions.png.
+
+Output: wink-directions.png. Raster exploration, not a final vector master; small-size examples are generated illustrations, not measured pixel tests. No production-readiness claim. The three treatments explore a simplified body, a compact face, and the isolated eye/smile.
+
+## Exact prompt
+
+Use case: logo-brand
+Asset type: controlled logo simplification study, THREE closely related variations, landscape presentation board.
+Reference image: focus EXCLUSIVELY on the middle "POCKET PAL" creature. The user specifically loves its highly memorable single crescent-shaped eye (a round eye with a bite removed from upper right) and requests simplification and distillation. Preserve that eye's exact character and relaxed cheeky expression. Ignore the left typography and right ribbon completely.
+Produce a polished minimal identity design board for InCreditble, with three equally sized columns, warm opaque ivory background, dark aubergine #241634 shapes and tiny violet labels, flat solid vector-like artwork. No gradients, shading, 3D, texture, strokes, shadow, glow, or transparency. Lots of clean space.
+Variation A "01 / LITTLE PAL": simplify the reference creature into a SINGLE compact softly asymmetrical bean/pocket body with gently leaning top and rounded base. Remove ALL limbs, feet, hands, sole, ground shadow and detail. Keep one distinctive ivory crescent eye in the upper-right half and one tiny softly curved ivory smile below it. Two cutouts only. Avoid bag handles, ghost tail or pointed ears. Cute but mature and bold.
+Variation B "02 / WINK": distill into a compact rounded skewed square/pebble face, slightly tilted 10 degrees, bold consistent silhouette. The distinctive crescent eye is now much larger, hero feature, and is positioned slightly above center; one short upturned mouth below. The eye and mouth should visually balance as a memorable optical composition, not a standard emoji. No body, no limbs, no frame. This is the recommended most logo-like direction. Avoid resembling a shopping bag or a document icon.
+Variation C "03 / JUST A WINK": remove the containing silhouette ENTIRELY. Only a boldly filled dark aubergine crescent eye above a short thick curved smile, arranged as the same compact slightly tilted expression. Exactly two simple disconnected filled shapes, generous breathing room between. No second eye, eyebrows, sparkles or anything else. Crescent eye is dominant, not a thin moon. This should feel like the face escaped its container, an abstract expressive symbol.
+Each column shows a large hero symbol (same optical size) in the top half, a smaller symbol paired horizontally with exact wordmark "InCreditble" below, set in the same confident clean slightly rounded bold sans across all columns. Wordmark all dark aubergine; spell exactly I n C r e d i t b l e. Below each lockup show the SAME symbol in solid black at a small size, then white reversed on a small aubergine square. Exact consistent geometry across instances, no arbitrary variation. Small labels only: "01 / LITTLE PAL", "02 / WINK", "03 / JUST A WINK". Top title "InCreditble / The wink, refined". No tagline, no paragraphs, no marketing copy. The goal is refinement through subtraction and exceptional negative space, NOT new unrelated concepts. Keep the crescent eye faithful to the reference in all three options. Render a complete clean opaque board with no clipping.
