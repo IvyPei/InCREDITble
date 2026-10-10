@@ -16,7 +16,7 @@ InCreditble is a corporate-bond trading prototype for people who are new to inve
 | Product & brand | [Positioning](demo/POSITIONING.md) · [WINK brand kit](https://github.com/IvyPei/InCREDITble/tree/main/brand/wink) |
 | Complete demo bundle | [Download ZIP](https://github.com/IvyPei/InCREDITble/raw/refs/heads/main/demo/releases/InCreditble-demo.zip) · [Package checks](demo/PACKAGE_CHECK.md) |
 
-The video is a first-cut screenshot montage with English synthetic narration and burned-in captions. The editable deck includes sources and speaker notes, plus the actual website welcome screen on slide 5. See [deliverable details](demo/deliverables/README.md). This private repository requires access; it is not a public website deployment.
+The video is a first-cut screenshot montage with English synthetic narration and burned-in captions. The editable deck includes sources and speaker notes, plus the actual website welcome screen on slide 5. See [deliverable details](demo/deliverables/README.md). The links above contain the video, editable deck and demo bundle. To run the interactive prototype, follow the local setup below.
 
 ## The problem we are solving
 
