@@ -50,21 +50,18 @@ Initial customer segment is a founder hypothesis. No serviceable market or reven
 
 TIMING: 20 seconds
 
-
-
-Fidelity already supports filtered bond search. Public offers fractional bonds and AI questions, while Webull offers managed bond portfolios. So small tickets and AI alone are not enough. Our hypothesis is that fewer explained choices and visible payment terms help beginners make a decision they understand.
-
-
+Fidelity supports filtered bond search. Public offers selected fractional corporate and Treasury bonds from $100 face value. Robinhood offers bond exposure through ETFs, while Webull offers managed bond portfolios. Our focus is an explained path to an individual corporate bond. We are testing whether fewer choices and visible payment terms help beginners make a decision they understand.
 
 SOURCES AND CONTEXT
 
-Official sources checked October 10, 2026. Fidelity: https://www.fidelity.com/webcontent/ap002390-mlo-content/20.04/help/learn_searching_fixed_income_inventory.shtml
-
-Public: https://public.com/invest/bonds
-
+Official sources checked October 10, 2026.
+Fidelity: https://www.fidelity.com/webcontent/ap002390-mlo-content/20.04/help/learn_searching_fixed_income_inventory.shtml
+Robinhood supported investments: https://robinhood.com/us/en/support/articles/investments-you-can-make-on-robinhood/
+Robinhood fractional shares: https://robinhood.com/us/en/support/articles/fractional-shares/
+Robinhood example bond ETF: https://robinhood.com/us/en/stocks/DFSD/
 Webull managed corporate High Income portfolio: https://www.webull.com/help/faq/11139
 
-Comparisons summarize documented workflows, not execution quality or absence of competitor features. Webull also offers separate self-directed bonds. InCreditble $10 minimum is a prototype design, not a live brokerage offering.
+Robinhood is an adjacent retail investing alternative. The ETF-share minimum is not an individual bond minimum. Robinhood lists bonds and fixed-income trading as unsupported. Eligible stocks and ETFs support fractional orders from $1. Comparisons summarize documented workflows, not execution quality or absence of other competitor features. Webull also offers separate self-directed bonds. InCreditble $10 minimum is a prototype design, not a live brokerage offering.
 
 ## Slide 5
 
@@ -147,3 +144,20 @@ Next, we will run unassisted tests with ten first-time investors and check wheth
 SOURCES AND CONTEXT
 
 Proposed next milestones, not completed traction: ten unassisted tests; demand and pricing research; execution, custody and fractional economics exploration. No partnership, launch approval or sustainable revenue model claimed. Read-only aggregation and standalone versus embedded distribution remain hypotheses.
+
+
+## Slide 11
+
+TIMING: 10 seconds
+
+Contact our team on LinkedIn. Ivy Pei, Founder, and Ren Jie T., CTO. Special thanks to Pink Pan, our mentor.
+
+SOURCES AND CONTEXT
+
+Team roles and links supplied by the founder.
+https://www.linkedin.com/in/ivypei/
+https://www.linkedin.com/in/ren-jie-t-619a6b1aa/
+https://www.linkedin.com/in/t-h-p/
+
+
+Public comparison restored October 11, 2026: https://public.com/invest/bonds and https://public.com/disclosures/apex-fractional-bond-disclosure . The $100 figure is face value on eligible fractional bonds.

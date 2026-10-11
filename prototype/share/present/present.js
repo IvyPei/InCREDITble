@@ -8,13 +8,13 @@ function show(index,update=true){
  video.pause();current=Math.max(0,Math.min(titles.length-1,index));
  const isVideo=current===2;image.hidden=isVideo;video.hidden=!isVideo;play.hidden=!isVideo;
  if(isVideo)video.currentTime=0;
- else {image.src=`./slides/slide-${String(current+1).padStart(2,'0')}.png`;image.alt=titles[current];}
+ else {image.src=`./slides/slide-${String(current+1).padStart(2,'0')}.png?v=public-1`;image.alt=titles[current];}
  document.querySelector('#pitch-feedback').hidden=current<8;
  prev.disabled=current===0;next.disabled=current===titles.length-1;jump.value=String(current);
  document.querySelector('#counter').textContent=`${current+1} / ${titles.length}`;
  document.querySelector('#hint').textContent=isVideo?'Click play. The market slide appears when the demo finishes.':'Arrow keys to move · F for fullscreen · Space to play the demo';
  if(update){history.replaceState(null,'',`?slide=${current+1}`);if(started===null)started=Date.now();}
- if(current+1<titles.length){const preload=new Image();preload.src=`./slides/slide-${String(current+2).padStart(2,'0')}.png`;}
+ if(current+1<titles.length){const preload=new Image();preload.src=`./slides/slide-${String(current+2).padStart(2,'0')}.png?v=public-1`;}
 }
 async function fullscreen(){try{if(document.fullscreenElement)await document.exitFullscreen();else await container.requestFullscreen();if(started===null)started=Date.now();}catch{document.querySelector('#hint').textContent='Fullscreen is unavailable here. You can still present in this window.';}}
 async function toggleVideo(){if(!video.paused){video.pause();return;}try{await video.play();if(started===null)started=Date.now();}catch{play.hidden=false;document.querySelector('#hint').textContent='Use the video playback controls to start the demo.';}}
