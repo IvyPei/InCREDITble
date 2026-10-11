@@ -9,6 +9,7 @@ function show(index,update=true){
  const isVideo=current===2;image.hidden=isVideo;video.hidden=!isVideo;play.hidden=!isVideo;
  if(isVideo)video.currentTime=0;
  else {image.src=`./slides/slide-${String(current+1).padStart(2,'0')}.png`;image.alt=titles[current];}
+ document.querySelector('#pitch-feedback').hidden=current<8;
  prev.disabled=current===0;next.disabled=current===titles.length-1;jump.value=String(current);
  document.querySelector('#counter').textContent=`${current+1} / ${titles.length}`;
  document.querySelector('#hint').textContent=isVideo?'Click play. The market slide appears when the demo finishes.':'Arrow keys to move · F for fullscreen · Space to play the demo';

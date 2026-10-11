@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>InCreditble — Your thoughts matter</title>
+<meta name="description" content="Share feedback on InCreditble or leave your email to hear about early testing.">
+<link rel="icon" href="/assets/favicon.svg"><link rel="stylesheet" href="./feedback.css?v=1"><script src="./feedback.js?v=1" defer></script>
+</head>
+<body>
+<header><a href="/?view=overview" aria-label="InCreditble home"><img src="/assets/logo.svg" alt="InCreditble" width="200" height="47"></a><a class="back" href="/?view=overview">Back to the prototype <span aria-hidden="true">↗</span></a></header>
+<main>
+<section class="intro"><img class="wink" src="/assets/wink.svg" width="62" height="62" alt=""><p class="eyebrow">Help shape InCreditble</p><h1>Your first impression.<br><span>Our next step.</span></h1><p>Tell us what felt clear, what didn’t,<br class="desktop-break"> or leave your email to stay in touch.</p></section>
+<section class="form-section" aria-label="Feedback and interest">
+<form id="feedback-form">
+<fieldset class="intent"><legend class="sr-only">What would you like to do?</legend><label><input type="radio" name="intent" value="feedback" checked><span>Leave feedback</span></label><label><input type="radio" name="intent" value="interest"><span>I’m interested</span></label></fieldset>
+<p class="form-intro" id="form-intro">A quick thought can make a big difference. No email needed.</p>
+<div class="field"><label for="name">Your name <span>(optional)</span></label><input id="name" name="name" autocomplete="name" maxlength="80" placeholder="First name is fine"></div>
+<div class="field"><label for="message">Your thoughts <span id="message-optional" hidden>(optional)</span></label><textarea id="message" name="message" rows="4" maxlength="2000" required placeholder="What would make this more useful for you?"></textarea><small>No account numbers or financial details, please.</small></div>
+<label class="consent"><input id="consent" name="consent" type="checkbox"><span>Yes, the InCreditble team may email me about my feedback, early testing and product updates.</span></label>
+<div class="field email-field" id="email-field" hidden><label for="email">Email address</label><input id="email" name="email" type="email" autocomplete="email" maxlength="254" placeholder="you@example.com" disabled></div>
+<div class="website" aria-hidden="true"><label for="website">Leave this field empty</label><input id="website" name="website" tabindex="-1" autocomplete="off"></div>
+<p id="form-error" class="error" role="alert" hidden></p>
+<button id="submit" type="submit">Send feedback <span aria-hidden="true">→</span></button>
+<p class="privacy">Your response is private to our team. We’ll only email you if you agree above. You can ask us to stop contacting you or delete your response at any time.</p>
+</form>
+<div id="success" tabindex="-1" hidden><span class="success-mark" aria-hidden="true">✓</span><h2 id="success-title">Thank you for helping us improve.</h2><p id="success-message"></p><a class="return" href="/?view=overview">Back to the prototype <span aria-hidden="true">→</span></a></div>
+<noscript>Please enable JavaScript to send feedback.</noscript>
+</section>
+</main>
+<footer>InCreditble · Built for your first bond.<a href="https://www.linkedin.com/in/ivypei/" target="_blank" rel="noopener noreferrer">Contact the team</a></footer>
+</body></html>

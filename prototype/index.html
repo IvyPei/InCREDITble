@@ -4,6 +4,7 @@
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>InCreditble — Corporate bonds, made clear</title>
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="trading.css?v=novice-flow-1"><meta name="theme-color" content="#faf9f6">
+<link rel="stylesheet" href="feedback/entry.css?v=1">
 </head>
 <body data-intro="true">
 <section id="welcome-intro" class="welcome-intro" aria-labelledby="welcome-title">
@@ -27,13 +28,14 @@
     </div>
     <button type="button" id="skip-intro" class="welcome-enter">Enter overview <span aria-hidden="true">→</span></button>
     <p class="welcome-demo">Interactive demo · No real money</p>
+    <a class="welcome-feedback" href="/feedback/?from=prototype">Leave feedback / Stay in touch →</a>
   </div>
 </section>
 <div id="app-shell" inert>
 <!-- Throwaway UI prototype: can a novice choose and trade fractional corporate bonds without searching CUSIPs? Three layouts at ?variant=A/B/C; reviewer controls at ?review=1. Synthetic data only; demo progress is saved in this browser. -->
 <a class="skip" href="#main">Skip to content</a>
 <header class="header"><button type="button" data-action="overview" class="logo" aria-label="InCreditble home"><img src="assets/logo.svg" alt="InCreditble" width="186" height="44"></button><nav aria-label="Main navigation"><button data-nav="overview">Overview</button><button data-nav="discover">Find bonds</button></nav><div class="account-nav"><button type="button" id="account-toggle" class="profile-button" data-action="account-menu" aria-haspopup="menu" aria-expanded="false" aria-controls="account-menu"><span class="avatar" aria-hidden="true">Y</span><span>Your account</span><span class="account-chevron" aria-hidden="true">⌄</span></button><div id="account-menu" class="account-menu" role="menu" aria-label="Your account" hidden></div></div></header>
-<div class="demo-note"><span class="demo-dot"></span>Interactive demo <span>· Sample accounts and trades. No real money.</span></div>
+<div class="demo-note"><span class="demo-dot"></span>Interactive demo <span>· Sample accounts and trades. No real money.</span><a class="demo-feedback" href="/feedback/?from=prototype">Leave feedback / Stay in touch ↗</a></div>
 <main id="main" tabindex="-1"></main>
 <footer class="footer"><span>InCreditble <span class="muted">· Corporate bonds, made clear.</span></span><button class="link" data-action="about">About this demo</button></footer>
 <div id="review-controls" hidden></div><dialog id="dialog" aria-labelledby="dialog-title"><div id="dialog-content"></div></dialog><div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
