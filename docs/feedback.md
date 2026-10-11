@@ -2,7 +2,7 @@
 
 Public page: https://increditble.vercel.app/feedback/
 
-Visitors can leave feedback without an email, or select “I’m interested” and explicitly agree to email contact. Interest collection does not send email automatically. Team members must use the stored contact consent when following up.
+One form collects feedback and interest together, with no mode selector. Visitors can leave feedback without an email, opt into email contact without a message, or do both. Empty submissions are rejected. Interest collection does not send email automatically. Team members must use the stored contact consent when following up.
 
 Responses are JSON files in the **private** Vercel Blob store `increditble-feedback`, connected to the InCreditble project in Production and Preview. Open https://vercel.com/ivypei/increditble/stores while signed in, select the store, then browse `feedback/YYYY-MM-DD/`. Files starting with `interest-` identify interest signups; `feedback-` files can also include a contact opt-in. A response includes its creation date, name, message, email (only with consent), consent wording/version/date and the entry point.
 
