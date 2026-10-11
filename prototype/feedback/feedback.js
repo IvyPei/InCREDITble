@@ -2,12 +2,13 @@
 const form=document.querySelector('#feedback-form'),consent=form.elements.consent,email=form.elements.email,message=form.elements.message,submit=document.querySelector('#submit'),error=document.querySelector('#form-error');
 const source=new URLSearchParams(location.search).get('from');
 function update(){
- document.querySelector('#email-field').hidden=!consent.checked;email.disabled=!consent.checked;email.required=consent.checked;
+ email.required=consent.checked;
  error.hidden=true;
 }
 form.addEventListener('change',update);
 form.addEventListener('submit',async event=>{
  event.preventDefault();if(submit.disabled)return;if(!form.reportValidity())return;
+ if(email.value.trim()&&!consent.checked){error.textContent='Please agree to email contact below, or leave the email field empty.';error.hidden=false;consent.focus();return;}
  const intent=message.value.trim()?'feedback':'interest';
  const payload={intent,name:form.elements.name.value.trim(),message:message.value.trim(),email:consent.checked?email.value.trim():'',consent:consent.checked,website:form.elements.website.value,source};
  if(!payload.message&&!payload.consent){error.textContent='Share a thought, or agree to email contact to stay in touch.';error.hidden=false;message.focus();return;}

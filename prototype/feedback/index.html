@@ -4,7 +4,7 @@
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>InCreditble — Your thoughts matter</title>
 <meta name="description" content="Share feedback on InCreditble or leave your email to hear about early testing.">
-<link rel="icon" href="/assets/favicon.svg"><link rel="stylesheet" href="./feedback.css?v=2"><script src="./feedback.js?v=2" defer></script>
+<link rel="icon" href="/assets/favicon.svg"><link rel="stylesheet" href="./feedback.css?v=2"><script src="./feedback.js?v=3" defer></script>
 </head>
 <body>
 <header><a href="/?view=overview" aria-label="InCreditble home"><img src="/assets/logo.svg" alt="InCreditble" width="200" height="47"></a><a class="back" href="/?view=overview">Back to the prototype <span aria-hidden="true">↗</span></a></header>
@@ -15,9 +15,9 @@
 <h2 class="form-title">Let’s hear from you.</h2>
 <p class="form-intro">Share a thought, leave your email for updates, or both.</p>
 <div class="field"><label for="name">Your name <span>(optional)</span></label><input id="name" name="name" autocomplete="name" maxlength="80" placeholder="First name is fine"></div>
+<div class="field email-field" id="email-field"><label for="email">Email address <span>(optional)</span></label><input id="email" name="email" type="email" autocomplete="email" maxlength="254" placeholder="you@example.com"></div>
 <div class="field"><label for="message">Your thoughts <span>(optional)</span></label><textarea id="message" name="message" rows="4" maxlength="2000" placeholder="What would make this more useful for you?"></textarea><small>No account numbers or financial details, please.</small></div>
 <label class="consent"><input id="consent" name="consent" type="checkbox"><span>Yes, the InCreditble team may email me about my feedback, early testing and product updates.</span></label>
-<div class="field email-field" id="email-field" hidden><label for="email">Email address</label><input id="email" name="email" type="email" autocomplete="email" maxlength="254" placeholder="you@example.com" disabled></div>
 <div class="website" aria-hidden="true"><label for="website">Leave this field empty</label><input id="website" name="website" tabindex="-1" autocomplete="off"></div>
 <p id="form-error" class="error" role="alert" hidden></p>
 <button id="submit" type="submit">Send <span aria-hidden="true">→</span></button>
