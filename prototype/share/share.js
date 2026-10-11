@@ -22,14 +22,14 @@ for (const name of ['video', 'slides']) {
 document.title = view === 'slides' ? 'InCreditble — Pitch deck' : 'InCreditble — Product demo';
 function showSlide(value, updateUrl = true) {
   current = Math.max(1, Math.min(count, value));
-  slide.src = `./slides/slide-${String(current).padStart(2, '0')}.png`;
+  slide.src = `./slides/slide-${String(current).padStart(2, '0')}.png?v=8`;
   slide.alt = `InCreditble pitch deck — slide ${current} of ${count}`;
   document.querySelector('#counter').textContent = `${current} / ${count}`;
   prev.disabled = current === 1;
   next.disabled = current === count;
   jump.value = String(current);
   if (updateUrl) history.replaceState(null, '', `?view=slides&slide=${current}`);
-  if (current < count) { const img = new Image(); img.src = `./slides/slide-${String(current+1).padStart(2,'0')}.png`; }
+  if (current < count) { const img = new Image(); img.src = `./slides/slide-${String(current+1).padStart(2,'0')}.png?v=8`; }
 }
 prev.addEventListener('click', () => showSlide(current - 1));
 next.addEventListener('click', () => showSlide(current + 1));

@@ -10,8 +10,8 @@ InCreditble is a corporate-bond trading prototype for people who are new to inve
 
 | Material | Open or download |
 | --- | --- |
-| Latest pitch deck | [View 11 slides online](https://increditble.vercel.app/share/?view=slides) · [Download PowerPoint v7](prototype/share/InCreditble-pitch-v7.pptx) |
-| Product demo video | [Watch the 2:25 demo](https://increditble.vercel.app/share/?view=video) · [Download MP4 v5](prototype/share/InCreditble-demo-v5.mp4) |
+| Latest pitch deck | [View 11 slides online](https://increditble.vercel.app/share/?view=slides) · [Download PowerPoint v8](prototype/share/InCreditble-pitch-v8.pptx) |
+| Product demo video | [Watch the 2:25 demo](https://increditble.vercel.app/share/?view=video) · [Download MP4 v6](prototype/share/InCreditble-demo-v6.mp4) |
 | Present it live | [Walkthrough](demo/LIVE_DEMO.md) · [Video narration](demo/PITCH.md) · [Judge Q&A](demo/JUDGE_QA.md) |
 | Product & brand | [Positioning](demo/POSITIONING.md) · [WINK brand kit](https://github.com/IvyPei/InCREDITble/tree/main/brand/wink) |
 | Complete demo bundle | [Download ZIP](https://github.com/IvyPei/InCREDITble/raw/refs/heads/main/demo/releases/InCreditble-demo.zip) · [Package checks](demo/PACKAGE_CHECK.md) |
