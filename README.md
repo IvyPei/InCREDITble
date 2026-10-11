@@ -8,6 +8,8 @@ InCreditble is a corporate-bond trading prototype for people who are new to inve
 
 ## Demo & pitch
 
+**Live presentation:** [Open the continuous 3-minute pitch](https://increditble.vercel.app/share/present/) · [Download PowerPoint with embedded demo](prototype/share/present/InCreditble-live-pitch.pptx) · [Speaker guide](prototype/share/present/SPEAKER_GUIDE.md). The 68-second product demo sits after the problem; the web presentation returns to the market slide when playback finishes.
+
 | Material | Open or download |
 | --- | --- |
 | Latest pitch deck | [View 11 slides online](https://increditble.vercel.app/share/?view=slides) · [Download PowerPoint v8](prototype/share/InCreditble-pitch-v8.pptx) |
