@@ -10,13 +10,13 @@ InCreditble is a corporate-bond trading prototype for people who are new to inve
 
 | Material | Open or download |
 | --- | --- |
-| Latest pitch deck | [10-slide PowerPoint v4](demo/deliverables/InCreditble-pitch-v4.pptx) · [2:50 speaker script](demo/deliverables/PITCH_SCRIPT.md) |
-| Product demo video | [2:58 English demo · MP4](demo/deliverables/InCreditble-demo-v1.mp4) · [Subtitles](demo/deliverables/InCreditble-demo-v1.srt) |
+| Latest pitch deck | [View 11 slides online](https://increditble.vercel.app/share/?view=slides) · [Download PowerPoint v7](prototype/share/InCreditble-pitch-v7.pptx) |
+| Product demo video | [Watch the 2:25 demo](https://increditble.vercel.app/share/?view=video) · [Download MP4 v5](prototype/share/InCreditble-demo-v5.mp4) |
 | Present it live | [Walkthrough](demo/LIVE_DEMO.md) · [Video narration](demo/PITCH.md) · [Judge Q&A](demo/JUDGE_QA.md) |
 | Product & brand | [Positioning](demo/POSITIONING.md) · [WINK brand kit](https://github.com/IvyPei/InCREDITble/tree/main/brand/wink) |
 | Complete demo bundle | [Download ZIP](https://github.com/IvyPei/InCREDITble/raw/refs/heads/main/demo/releases/InCreditble-demo.zip) · [Package checks](demo/PACKAGE_CHECK.md) |
 
-The video is a first-cut screenshot montage with English synthetic narration and burned-in captions. The editable deck includes sources and speaker notes, plus the actual website welcome screen on slide 5. See [deliverable details](demo/deliverables/README.md). The links above contain the video, editable deck and demo bundle. To run the interactive prototype, follow the local setup below.
+The public sharing page needs no login. The latest video combines motion graphics, prototype illustrations, English narration and a bright original instrumental score. The editable 11-slide deck includes sources and speaker notes. Both end with team portraits and two member LinkedIn QR codes, with a separate mentor thank-you. The complete ZIP is an archived submission package; use the sharing page for the latest video and slides. [Try the live prototype](https://increditble.vercel.app/), or follow the local setup below.
 
 ## The problem we are solving
 

@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>InCreditble — Demo & pitch</title>
+<meta name="description" content="Meet InCreditble: corporate bonds, explained one step at a time. Watch the product demo or explore our pitch deck.">
+<meta property="og:title" content="InCreditble — Your first bond. At your pace.">
+<meta property="og:description" content="Watch the 2:25 product demo and explore our pitch deck.">
+<meta property="og:image" content="https://increditble.vercel.app/share/slides/slide-05.png">
+<meta property="og:type" content="website">
+<link rel="icon" href="/assets/favicon.svg">
+<link rel="stylesheet" href="./share.css">
+<script src="./share.js" defer></script>
+</head>
+<body>
+<header><a href="/" aria-label="InCreditble home"><img src="/assets/logo-white.svg" alt="InCreditble" width="240" height="60"></a><a class="prototype-link" href="/?view=overview">Try the prototype <span aria-hidden="true">↗</span></a></header>
+<main>
+<div class="intro"><p class="eyebrow">A simpler first step into bonds</p><h1>Your first bond.<br><span>At your pace.</span></h1><p class="subtitle">Meet InCreditble. Corporate bonds, explained one step at a time.</p></div>
+<nav class="tabs" aria-label="Presentation format"><a id="video-tab" href="?view=video" aria-current="page">Watch the demo <span>2:25</span></a><a id="slides-tab" href="?view=slides">Explore the slides <span>11 slides</span></a></nav>
+<section id="video-panel" aria-labelledby="video-tab">
+<div class="screen"><video controls playsinline preload="metadata" poster="./slides/slide-05.png" aria-label="InCreditble product demonstration"><source src="./InCreditble-demo-v5.mp4" type="video/mp4"><track label="English" kind="captions" srclang="en" src="./captions.vtt">Your browser does not support video playback. <a href="./InCreditble-demo-v5.mp4">Download the demo</a>.</video></div>
+<div class="toolbar"><p>From your first question to a $25 demo investment.</p><a href="./InCreditble-demo-v5.mp4" download>Download video <span aria-hidden="true">↓</span></a></div>
+</section>
+<section id="slides-panel" aria-labelledby="slides-tab" hidden>
+<div class="screen"><img id="slide" src="./slides/slide-01.png" alt="Pitch deck — slide 1 of 11" width="1920" height="1080"></div>
+<div class="toolbar slide-toolbar"><div class="pagination"><button id="prev" type="button" aria-label="Previous slide" disabled>←</button><span id="counter" role="status" aria-live="polite">1 / 11</span><button id="next" type="button" aria-label="Next slide">→</button><label class="sr-only" for="jump">Go to slide</label><select id="jump" aria-label="Go to slide"></select></div><a href="./InCreditble-pitch-v7.pptx" download>Download PowerPoint <span aria-hidden="true">↓</span></a></div>
+<p class="slide-hint">Use the arrows to browse. The PowerPoint includes speaker notes and sources.</p>
+</section>
+<noscript><p>Enable JavaScript to browse the slides, or <a href="./InCreditble-pitch-v7.pptx">download the PowerPoint</a>.</p></noscript>
+</main>
+<footer><span>Built for your first bond.</span><p>Prototype demonstration. Accounts, prices and trades are simulated.</p></footer>
+</body>
+</html>
